@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Truthset — Clinical data from India for AI</title>
-<meta name="description" content="Truthset connects AI labs and medtech companies in the USA and UK with a network of hospitals and clinics across India — for licensed retrospective datasets and custom, prospectively collected medical data.">
+<title>Truthset | Clinical data from India for AI</title>
+<meta name="description" content="Truthset connects AI labs and medtech companies in the USA and UK with a network of hospitals and clinics across India, for licensed and custom-built medical datasets.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -86,7 +86,6 @@
   .hero-note { margin-top: 20px; font-size: .88rem; color: var(--ink-3); }
   .route { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 24px; box-shadow: var(--shadow); }
   .route svg { width: 100%; height: auto; display: block; }
-  .route-caption { display: flex; justify-content: space-between; font-size: .8rem; color: var(--ink-3); margin-top: 10px; }
 
   /* Stats */
   .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 0; background: var(--surface); }
@@ -215,62 +214,61 @@
       <div>
         <div class="eyebrow">Clinical data partner for AI teams in the US &amp; UK</div>
         <h1>Real-world medical data from India's hospitals, <em>ready for your models.</em></h1>
-        <p class="lede">We connect AI labs and medtech companies with a network of 40+ hospitals and clinics across 7+ Indian cities — licensing de-identified retrospective datasets, and collecting new data built to your exact specification.</p>
+        <p class="lede">Licensed and custom-built clinical datasets from 40+ hospitals across India.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#contact">Tell us what you need →</a>
           <a class="btn btn-ghost" href="#work">See past programs</a>
         </div>
-        <p class="hero-note">40+ hospitals · 7+ cities · Ethics-committee approved · De-identified at source</p>
+        <p class="hero-note">Ethics-approved · De-identified at source</p>
       </div>
 
-      <div class="route" aria-label="Diagram: data flows from Indian hospital network to AI teams in the USA and UK">
-        <svg viewBox="0 0 420 300" role="img">
-          <title>Hospitals in India connected to AI teams in the USA and UK</title>
+      <div class="route" aria-label="Diagram: data flows from 40+ Indian hospitals through Truthset to AI teams in the USA and UK">
+        <svg viewBox="0 0 440 250" role="img">
+          <title>40+ hospitals in India connected through Truthset to AI teams in the USA and UK</title>
           <defs>
             <linearGradient id="g" x1="0" x2="1">
-              <stop offset="0" stop-color="var(--accent)" stop-opacity=".9"/>
-              <stop offset="1" stop-color="var(--warm)" stop-opacity=".9"/>
+              <stop offset="0" stop-color="var(--accent)"/>
+              <stop offset="1" stop-color="var(--warm)"/>
             </linearGradient>
           </defs>
-          <!-- left: hospital nodes -->
-          <g font-family="Inter, sans-serif" font-size="11" fill="var(--ink-2)">
-            <text x="20" y="22" font-weight="600" fill="var(--ink)" font-size="12">40+ hospitals · 7+ cities</text>
-            <g>
-              <circle cx="40" cy="60" r="6" fill="var(--accent)"/><text x="54" y="64">Tertiary hospitals</text>
-              <circle cx="40" cy="105" r="6" fill="var(--accent)"/><text x="54" y="109">Neurology centres</text>
-              <circle cx="40" cy="150" r="6" fill="var(--accent)"/><text x="54" y="154">Pathology labs</text>
-              <circle cx="40" cy="195" r="6" fill="var(--accent)"/><text x="54" y="199">Imaging centres</text>
-              <circle cx="40" cy="240" r="6" fill="var(--accent)"/><text x="54" y="244">Specialty clinics</text>
-            </g>
-          </g>
-          <!-- hub -->
-          <g>
-            <path d="M46 60 C 140 60, 160 150, 210 150" stroke="var(--line)" stroke-width="1.5" fill="none"/>
-            <path d="M46 105 C 140 105, 160 150, 210 150" stroke="var(--line)" stroke-width="1.5" fill="none"/>
-            <path d="M46 150 L 210 150" stroke="var(--line)" stroke-width="1.5" fill="none"/>
-            <path d="M46 195 C 140 195, 160 150, 210 150" stroke="var(--line)" stroke-width="1.5" fill="none"/>
-            <path d="M46 240 C 140 240, 160 150, 210 150" stroke="var(--line)" stroke-width="1.5" fill="none"/>
-            <rect x="182" y="118" width="64" height="64" rx="14" fill="var(--accent)"/>
-            <path d="M196 158c4-9 9-13 18-13s14 4 18 13" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linecap="round"/>
-            <text x="214" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="var(--ink-3)">curate · de-identify · QA</text>
-          </g>
-          <!-- right: destinations -->
-          <path d="M246 150 C 300 150, 300 95, 340 95" stroke="url(#g)" stroke-width="2.5" fill="none" stroke-dasharray="5 5">
-            <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.2s" repeatCount="indefinite"/>
-          </path>
-          <path d="M246 150 C 300 150, 300 205, 340 205" stroke="url(#g)" stroke-width="2.5" fill="none" stroke-dasharray="5 5">
-            <animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.2s" repeatCount="indefinite"/>
-          </path>
           <g font-family="Inter, sans-serif">
-            <rect x="340" y="76" width="64" height="38" rx="10" fill="var(--surface-2)" stroke="var(--line)"/>
-            <text x="372" y="93" text-anchor="middle" font-size="12" font-weight="600" fill="var(--ink)">USA</text>
-            <text x="372" y="106" text-anchor="middle" font-size="9" fill="var(--ink-3)">AI labs</text>
-            <rect x="340" y="186" width="64" height="38" rx="10" fill="var(--surface-2)" stroke="var(--line)"/>
-            <text x="372" y="203" text-anchor="middle" font-size="12" font-weight="600" fill="var(--ink)">UK</text>
-            <text x="372" y="216" text-anchor="middle" font-size="9" fill="var(--ink-3)">Medtech</text>
+            <text x="14" y="18" font-size="11" font-weight="600" letter-spacing=".08em" fill="var(--ink-3)">INDIA · 40+ SITES</text>
+            <text x="220" y="18" text-anchor="middle" font-size="11" font-weight="600" letter-spacing=".08em" fill="var(--ink-3)">TRUTHSET</text>
+            <text x="392" y="18" text-anchor="middle" font-size="11" font-weight="600" letter-spacing=".08em" fill="var(--ink-3)">YOUR TEAM</text>
+          </g>
+          <g fill="none" stroke="var(--ink-3)" stroke-opacity=".45" stroke-width="1.5">
+            <path d="M146 50 C 172 50, 170 125, 192 125"/>
+            <path d="M146 87 C 172 87, 170 125, 192 125"/>
+            <path d="M146 125 L 192 125"/>
+            <path d="M146 163 C 172 163, 170 125, 192 125"/>
+            <path d="M146 200 C 172 200, 170 125, 192 125"/>
+          </g>
+          <g font-family="Inter, sans-serif" font-size="12.5" fill="var(--ink-2)">
+            <circle cx="20" cy="50" r="5" fill="var(--accent)"/><text x="32" y="54">Hospitals</text>
+            <circle cx="20" cy="87" r="5" fill="var(--accent)"/><text x="32" y="91">Neurology</text>
+            <circle cx="20" cy="125" r="5" fill="var(--accent)"/><text x="32" y="129">Pathology labs</text>
+            <circle cx="20" cy="163" r="5" fill="var(--accent)"/><text x="32" y="167">Imaging centres</text>
+            <circle cx="20" cy="200" r="5" fill="var(--accent)"/><text x="32" y="204">Clinics</text>
+          </g>
+          <rect x="192" y="97" width="56" height="56" rx="14" fill="var(--accent)"/>
+          <g transform="translate(192 97) scale(1.75)">
+            <path d="M8 10h16M8 16h9M8 22h5" stroke="var(--accent-ink)" stroke-width="2" stroke-linecap="round"/>
+            <path d="m17 21 2.6 2.6L25 18" fill="none" stroke="var(--accent-ink)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <text x="220" y="236" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="var(--ink-3)">curate · de-identify · QA</text>
+          <g fill="none" stroke="url(#g)" stroke-width="2.5" stroke-dasharray="5 5">
+            <path d="M248 125 C 300 125, 300 78, 356 78"><animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.2s" repeatCount="indefinite"/></path>
+            <path d="M248 125 C 300 125, 300 172, 356 172"><animate attributeName="stroke-dashoffset" from="20" to="0" dur="1.2s" repeatCount="indefinite"/></path>
+          </g>
+          <g font-family="Inter, sans-serif">
+            <rect x="356" y="56" width="72" height="44" rx="10" fill="var(--surface-2)" stroke="var(--line)"/>
+            <text x="392" y="75" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)">USA</text>
+            <text x="392" y="90" text-anchor="middle" font-size="10" fill="var(--ink-3)">AI labs</text>
+            <rect x="356" y="150" width="72" height="44" rx="10" fill="var(--surface-2)" stroke="var(--line)"/>
+            <text x="392" y="169" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)">UK</text>
+            <text x="392" y="184" text-anchor="middle" font-size="10" fill="var(--ink-3)">Medtech</text>
           </g>
         </svg>
-        <div class="route-caption"><span>Source</span><span>Truthset</span><span>Your team</span></div>
       </div>
     </div>
   </section>
@@ -278,10 +276,10 @@
   <!-- Stats -->
   <section class="stats" aria-label="Track record">
     <div class="wrap stats-grid">
-      <div class="stat"><div class="stat-num">3,000+</div><div class="stat-label">EEG recordings delivered for one AI program</div></div>
-      <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Partner hospitals and clinics</div></div>
-      <div class="stat"><div class="stat-num">7+</div><div class="stat-label">Cities across India</div></div>
-      <div class="stat"><div class="stat-num">US · UK</div><div class="stat-label">Buyers served, with cross-border data agreements</div></div>
+      <div class="stat"><div class="stat-num">3,000+</div><div class="stat-label">EEGs delivered</div></div>
+      <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Partner hospitals</div></div>
+      <div class="stat"><div class="stat-num">7+</div><div class="stat-label">Cities</div></div>
+      <div class="stat"><div class="stat-num">US · UK</div><div class="stat-label">Buyers served</div></div>
     </div>
   </section>
 
@@ -291,29 +289,29 @@
       <div class="section-head">
         <div class="eyebrow">What we do</div>
         <h2>Two ways to get the data your model is missing.</h2>
-        <p class="lede">Whether a suitable archive already exists or the dataset has to be created from scratch, we handle the hospital relationships, approvals and logistics — you get model-ready data.</p>
+        <p class="lede">License what exists, or have us build what doesn't. We handle hospitals, approvals and logistics.</p>
       </div>
       <div class="grid-2">
         <article class="card">
           <span class="tag">Licensing &amp; access</span>
           <h3>Retrospective data licensing</h3>
-          <p>We match your requirements to archives held by partner hospitals, then broker a licence on clear terms. Fastest route to volume for pre-training, validation and benchmarking.</p>
+          <p>De-identified archives from partner hospitals, licensed on clear terms. The fastest route to volume.</p>
           <ul class="ticks">
-            <li>Feasibility check across the network, typically within days</li>
-            <li>De-identified at source before anything leaves the hospital</li>
-            <li>Licence terms covering use, exclusivity and retention</li>
-            <li>Sample sets available for evaluation before you commit</li>
+            <li>Feasibility check within days</li>
+            <li>De-identified at source</li>
+            <li>Clear terms on use and exclusivity</li>
+            <li>Sample sets before you commit</li>
           </ul>
         </article>
         <article class="card">
           <span class="tag">Custom collection</span>
           <h3>Purpose-built datasets</h3>
-          <p>When the data doesn't exist yet, we design and run a collection program across partner centres — to your protocol, devices, labels and demographic targets.</p>
+          <p>New data collected across partner centres to your protocol, devices and labels.</p>
           <ul class="ticks">
-            <li>Protocol design with clinicians and your ML team</li>
-            <li>Prospective collection with patient consent</li>
-            <li>Expert annotation by practising specialists</li>
-            <li>Rolling deliveries with QA reports and data cards</li>
+            <li>Protocol designed with clinicians</li>
+            <li>Consented, prospective collection</li>
+            <li>Specialist annotation</li>
+            <li>Rolling, QA-checked deliveries</li>
           </ul>
         </article>
       </div>
@@ -326,7 +324,7 @@
       <div class="section-head">
         <div class="eyebrow">Data we source</div>
         <h2>Across specialties and modalities.</h2>
-        <p class="lede">Don't see your modality? Ask — if a partner centre generates it, we can usually scope it.</p>
+        <p class="lede">Need something else? Just ask.</p>
       </div>
       <div class="mods">
         <div class="mod">
@@ -371,15 +369,14 @@
       <div class="section-head">
         <div class="eyebrow">Our work</div>
         <h2>Programs we've delivered.</h2>
-        <p class="lede">Two recent engagements, one licensing at scale and one specialist pathology sourcing.</p>
-      </div>
+              </div>
       <div class="grid-2">
         <article class="card case">
           <span class="tag">Neurology · EEG</span>
           <h3>Multi-centre EEG supply for an AI company</h3>
           <div class="case-metric">3,000+</div>
           <div class="case-metric-label">EEG recordings delivered</div>
-          <p>An AI company building EEG analysis models needed volume and variety it couldn't get at home. We connected them with neurology departments across several Indian hospitals and coordinated a multi-centre supply of de-identified recordings with accompanying clinical context.</p>
+          <p>An EEG AI company needed volume and variety. We sourced de-identified recordings from neurology departments across multiple hospitals.</p>
           <dl>
             <dt>Client</dt><dd>AI company (name withheld)</dd>
             <dt>Model</dt><dd>Hospital partnership &amp; data supply</dd>
@@ -391,7 +388,7 @@
           <h3>Histopathology access for a medtech company</h3>
           <div class="case-metric">Pathology</div>
           <div class="case-metric-label">Partner connected for product development</div>
-          <p>A medtech company needed access to histopathology material to develop and refine their product. We connected their team with histopathology partners in our network, giving them a direct channel to the specimens and expertise their work required.</p>
+          <p>A medtech company needed histopathology material for product development. We connected them with pathology partners in our network.</p>
           <dl>
             <dt>Client</dt><dd>Medtech company (name withheld)</dd>
             <dt>Model</dt><dd>Partner introduction &amp; access</dd>
@@ -407,20 +404,20 @@
     <div class="wrap">
       <div class="section-head">
         <div class="eyebrow">Why India</div>
-        <h2>Scale, diversity and speed that are hard to find elsewhere.</h2>
+        <h2>Scale, diversity and speed.</h2>
       </div>
       <div class="why">
         <div class="card">
           <h3>High clinical volume</h3>
-          <p>Busy tertiary centres see large patient volumes, so cohorts — including rarer conditions — fill faster than in most Western settings.</p>
+          <p>Large patient volumes mean cohorts, even rare ones, fill fast.</p>
         </div>
         <div class="card">
           <h3>Population diversity</h3>
-          <p>Data from South Asian populations is under-represented in most training sets. Adding it helps models generalise and reduces demographic bias.</p>
+          <p>South Asian data is under-represented in training sets. Adding it reduces bias.</p>
         </div>
         <div class="card">
           <h3>Cost-effective collection</h3>
-          <p>Prospective collection and expert annotation cost a fraction of US/UK rates, without compromising on clinical expertise.</p>
+          <p>Collection and annotation at a fraction of US/UK cost.</p>
         </div>
       </div>
       <div class="who" aria-label="Who we work with">
@@ -437,11 +434,11 @@
         <h2>From request to delivery.</h2>
       </div>
       <div class="steps">
-        <div class="step"><h3>Scope</h3><p>You share the modality, volume, labels, inclusion criteria and intended use.</p></div>
-        <div class="step"><h3>Feasibility</h3><p>We check 40+ partner hospitals and come back with sources, timelines and pricing.</p></div>
-        <div class="step"><h3>Approvals</h3><p>Ethics-committee clearance, consent pathway and data-use agreements put in place.</p></div>
-        <div class="step"><h3>Curate</h3><p>Data is de-identified at source, standardised, annotated and quality-checked.</p></div>
-        <div class="step"><h3>Deliver</h3><p>Secure transfer in your preferred format, with a data card and QA report.</p></div>
+        <div class="step"><h3>Scope</h3><p>Share modality, volume and labels.</p></div>
+        <div class="step"><h3>Feasibility</h3><p>Sources, timeline and price.</p></div>
+        <div class="step"><h3>Approvals</h3><p>Ethics clearance and data agreements.</p></div>
+        <div class="step"><h3>Curate</h3><p>De-identified, labelled and checked.</p></div>
+        <div class="step"><h3>Deliver</h3><p>Secure transfer with a QA report.</p></div>
       </div>
     </div>
   </section>
@@ -452,24 +449,24 @@
       <div>
         <div class="eyebrow">Trust &amp; compliance</div>
         <h2>Ethically sourced. Privacy first.</h2>
-        <p class="lede">Every program runs through the partner hospital's ethics process and is documented end-to-end, so your legal and regulatory teams have what they need.</p>
+        <p class="lede">Every program is ethics-approved and fully documented.</p>
       </div>
       <div class="comp-list">
         <div class="comp-item">
           <div class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
-          <div><h3>Ethics committee approval</h3><p>Programs follow ICMR national ethical guidelines and are cleared by the institution's ethics committee.</p></div>
+          <div><h3>Ethics committee approval</h3><p>Cleared by each hospital's ethics committee, following ICMR guidelines.</p></div>
         </div>
         <div class="comp-item">
           <div class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
-          <div><h3>De-identified at source</h3><p>Direct identifiers removed inside the hospital, aligned with HIPAA Safe Harbor-style standards. Re-identification is contractually prohibited.</p></div>
+          <div><h3>De-identified at source</h3><p>Identifiers removed inside the hospital. Re-identification is contractually banned.</p></div>
         </div>
         <div class="comp-item">
           <div class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="m9 15 2 2 4-4"/></svg></div>
-          <div><h3>Clear data agreements</h3><p>Data-use and transfer agreements built with India's DPDP Act in mind and compatible with US and UK GDPR requirements.</p></div>
+          <div><h3>Clear data agreements</h3><p>Agreements written with India's DPDP Act and UK GDPR in mind.</p></div>
         </div>
         <div class="comp-item">
           <div class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/><circle cx="12" cy="12" r="9"/></svg></div>
-          <div><h3>Full provenance</h3><p>Source centre, collection dates, devices and consent basis documented for every dataset.</p></div>
+          <div><h3>Full provenance</h3><p>Source, dates, devices and consent recorded for every dataset.</p></div>
         </div>
       </div>
     </div>
@@ -485,27 +482,23 @@
       <div class="faq">
         <details>
           <summary>What's the difference between licensing and custom collection?</summary>
-          <p>Licensing gives you access to data hospitals already hold — it's faster and suited to volume. Custom collection creates new data to your protocol, which suits specific devices, labels, rare conditions or prospective study designs. Many programs combine both.</p>
+          <p>Licensing uses data hospitals already hold, so it's faster. Custom collection creates new data to your protocol. Many programs combine both.</p>
         </details>
         <details>
           <summary>How quickly can we get data?</summary>
-          <p>We usually confirm feasibility within one to two weeks. Retrospective deliveries typically begin within weeks of approvals; custom collection timelines depend on volume and recruitment and are agreed up front.</p>
+          <p>Feasibility in one to two weeks. Licensed data usually ships within weeks of approval. Custom timelines are agreed up front.</p>
         </details>
         <details>
           <summary>Can we evaluate a sample first?</summary>
-          <p>Yes. For most retrospective programs we can arrange a small sample set so your team can check format, quality and labels before committing to a full order.</p>
+          <p>Yes. For most licensed data we can share a small sample first.</p>
         </details>
         <details>
           <summary>Is the data exclusive?</summary>
-          <p>By default licences are non-exclusive. Exclusive or time-limited exclusive terms can be negotiated, and data from custom collection programs can be built exclusively for you.</p>
-        </details>
-        <details>
-          <summary>What formats do you deliver in?</summary>
-          <p>Native clinical formats where possible — EDF/EDF+ for EEG, DICOM for imaging, SVS/TIFF for whole-slide images — plus structured metadata in CSV or JSON. We can map to your schema on request.</p>
+          <p>Non-exclusive by default. Exclusive terms are available, and custom data can be yours alone.</p>
         </details>
         <details>
           <summary>Do you work with academic groups and startups?</summary>
-          <p>Yes. We work with teams of all sizes and can scope smaller pilot datasets for early-stage programs.</p>
+          <p>Yes. We can scope small pilot datasets too.</p>
         </details>
       </div>
     </div>
@@ -517,7 +510,7 @@
       <div>
         <div class="eyebrow">Get in touch</div>
         <h2>Tell us what your model needs.</h2>
-        <p class="lede">Share a short brief and we'll come back with a feasibility view — sources, timelines and an indicative price.</p>
+        <p class="lede">Send a short brief. We'll reply with sources, timeline and price.</p>
         <div class="contact-points">
           <div>🔒 Briefs go straight to our partnerships team</div>
           <div>🌍 Serving teams in the USA &amp; UK, sourcing across India</div>
@@ -577,7 +570,7 @@
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        _subject: 'Truthset data request — ' + (f.company.value || f.name.value),
+        _subject: 'Truthset data request: ' + (f.company.value || f.name.value),
         _template: 'table',
         _captcha: 'false',
         _honey: f._honey.value,
@@ -588,7 +581,7 @@
     }).then(function (r) { return r.json(); }).then(function (d) {
       if (String(d.success) !== 'true') throw new Error(d.message || 'failed');
       f.reset();
-      note.textContent = 'Thanks — your brief is in. We\'ll be in touch shortly.';
+      note.textContent = 'Thanks, your brief is in. We\'ll be in touch shortly.';
     }).catch(function () {
       note.textContent = 'Something went wrong sending your brief. Please try again in a moment.';
     }).finally(function () { btn.disabled = false; });
