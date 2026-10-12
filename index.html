@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Truthset | Clinical data you can build on</title>
-<meta name="description" content="Truthset sources licensed, custom-collected and expert-annotated clinical data from 40+ partner hospitals and 200+ doctors across India, for medtech, research, pharma and AI teams.">
+<meta name="description" content="Truthset sources licensed, custom-collected and expert-annotated clinical data, to FDA standards on request, from 40+ partner hospitals and 200+ doctors across India, for medtech, research, pharma and AI teams.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
@@ -57,6 +57,7 @@
   .hero { text-align: center; padding: 96px 0 72px; }
   .hero h1 { font-size: clamp(2.8rem, 7vw, 5.4rem); margin: 22px auto 24px; max-width: 980px; }
   .hero .lede { color: var(--mut); font-size: clamp(17px, 2vw, 20px); max-width: 640px; margin: 0 auto 36px; }
+  .trust { margin-top: 28px; font-size: 14px; color: var(--mut); letter-spacing: .02em; }
   .ctas { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
 
   /* Specimen panels */
@@ -65,7 +66,7 @@
   .panel { background: #1a3d63; border: 1px solid rgba(233,220,192,.28); box-shadow: 0 24px 48px -24px rgba(5,18,34,.6); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 24px; min-height: 190px; }
   @media (min-width: 820px) { .panel:nth-child(1), .panel:nth-child(3) { height: 340px; } .panel:nth-child(2) { height: 430px; } }
   .panel svg { position: absolute; left: 0; top: 0; width: 100%; height: calc(100% - 72px); }
-  .panel .cap { position: relative; display: flex; justify-content: space-between; align-items: end; gap: 12px; }
+  .panel .cap { position: relative; display: flex; flex-direction: column; gap: 4px; }
   .panel .cap b { font: 500 26px "Newsreader", serif; color: #fff; }
   .panel .cap span { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-soft); }
 
@@ -210,6 +211,7 @@
         <a class="btn btn-fill" href="#contact">Discuss a dataset</a>
         <a class="btn btn-line" href="#services">How it works</a>
       </div>
+      <p class="trust">FDA-standard collection on request · Ethics-approved · De-identified at source</p>
     </div>
 
     <div class="panels" aria-hidden="true">
@@ -224,7 +226,19 @@
           </g>
           <g stroke="#ffffff" stroke-opacity=".08"><path d="M0 92h300M0 138h300M0 182h300"/></g>
         </svg>
-        <div class="cap"><b>Neurophysiology</b><span>EEG · PSG</span></div>
+        <div class="cap"><b>Neurophysiology</b><span>EEG · EMG · PSG</span></div>
+      </div>
+      <!-- Cardiology: ECG / EKG -->
+      <div class="panel">
+        <svg viewBox="0 0 440 430" preserveAspectRatio="xMidYMid slice">
+          <path d="M0 20h440M0 40h440M0 60h440M0 80h440M0 100h440M0 120h440M0 140h440M0 160h440M0 180h440M0 200h440M0 220h440M0 240h440M0 260h440M0 280h440M0 300h440M0 320h440M0 340h440M0 360h440M0 380h440M0 400h440M0 420h440M20 0v430M40 0v430M60 0v430M80 0v430M100 0v430M120 0v430M140 0v430M160 0v430M180 0v430M200 0v430M220 0v430M240 0v430M260 0v430M280 0v430M300 0v430M320 0v430M340 0v430M360 0v430M380 0v430M400 0v430M420 0v430" stroke="#e9dcc0" stroke-opacity=".07"/>
+          <g fill="none" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round">
+            <path stroke="#e9dcc0" stroke-opacity=".9" d="M0 90 h14 q5 -6 10 0 h6 l3 4 l5 -44 l5 54 l3 -14 h12 q8 -12 16 0 h18 M92 90 h14 q5 -6 10 0 h6 l3 4 l5 -44 l5 54 l3 -14 h12 q8 -12 16 0 h18 M184 90 h14 q5 -6 10 0 h6 l3 4 l5 -44 l5 54 l3 -14 h12 q8 -12 16 0 h18 M276 90 h14 q5 -6 10 0 h6 l3 4 l5 -44 l5 54 l3 -14 h12 q8 -12 16 0 h18 M368 90 h14 q5 -6 10 0 h6 l3 4 l5 -44 l5 54 l3 -14 h12 q8 -12 16 0 h18"/>
+            <path stroke="#ffffff" stroke-opacity=".4" d="M30 190 h14 q5 -5 10 0 h6 l3 3 l5 -35 l5 43 l3 -11 h12 q8 -10 16 0 h18 M122 190 h14 q5 -5 10 0 h6 l3 3 l5 -35 l5 43 l3 -11 h12 q8 -10 16 0 h18 M214 190 h14 q5 -5 10 0 h6 l3 3 l5 -35 l5 43 l3 -11 h12 q8 -10 16 0 h18 M306 190 h14 q5 -5 10 0 h6 l3 3 l5 -35 l5 43 l3 -11 h12 q8 -10 16 0 h18 M398 190 h14 q5 -5 10 0 h6 l3 3 l5 -35 l5 43 l3 -11 h12 q8 -10 16 0 h18"/>
+            <path stroke="#b08a3e" d="M12 300 h14 q5 -7 10 0 h6 l3 4 l5 -48 l5 59 l3 -15 h12 q8 -13 16 0 h18 M104 300 h14 q5 -7 10 0 h6 l3 4 l5 -48 l5 59 l3 -15 h12 q8 -13 16 0 h18 M196 300 h14 q5 -7 10 0 h6 l3 4 l5 -48 l5 59 l3 -15 h12 q8 -13 16 0 h18 M288 300 h14 q5 -7 10 0 h6 l3 4 l5 -48 l5 59 l3 -15 h12 q8 -13 16 0 h18 M380 300 h14 q5 -7 10 0 h6 l3 4 l5 -48 l5 59 l3 -15 h12 q8 -13 16 0 h18"/>
+          </g>
+        </svg>
+        <div class="cap"><b>Cardiology</b><span>ECG · EKG · Holter</span></div>
       </div>
       <!-- Histopathology: tissue cells -->
       <div class="panel">
@@ -246,21 +260,6 @@
           </g>
         </svg>
         <div class="cap"><b>Histopathology</b><span>Slides · WSI</span></div>
-      </div>
-      <!-- Radiology: scan -->
-      <div class="panel">
-        <svg viewBox="0 0 300 340" preserveAspectRatio="xMidYMid slice">
-          <g fill="none">
-            <ellipse cx="150" cy="140" rx="92" ry="104" stroke="#e9dcc0" stroke-opacity=".7" stroke-width="1.4"/>
-            <ellipse cx="150" cy="140" rx="74" ry="86" stroke="#ffffff" stroke-opacity=".3"/>
-            <path d="M150 58c-30 20-44 50-40 82s18 58 40 80c22-22 36-48 40-80s-10-62-40-82z" stroke="#ffffff" stroke-opacity=".35"/>
-            <path d="M150 58v162" stroke="#ffffff" stroke-opacity=".2"/>
-            <circle cx="178" cy="120" r="12" stroke="#b08a3e" stroke-width="1.6"/>
-            <path d="M196 106l26 -22" stroke="#b08a3e" stroke-width="1.2"/>
-          </g>
-          <g stroke="#ffffff" stroke-opacity=".12"><path d="M30 140h40M230 140h40M150 20v26M150 236v26"/></g>
-        </svg>
-        <div class="cap"><b>Radiology</b><span>CT · MRI · X-ray</span></div>
       </div>
     </div>
   </div>
@@ -300,7 +299,7 @@
           <ul>
             <li>Protocol designed with clinicians</li>
             <li>Consented, prospective collection</li>
-            <li>Patient criteria you define</li>
+            <li>Run to FDA standards on request</li>
             <li>Rolling, quality-checked deliveries</li>
           </ul>
         </div>
@@ -328,14 +327,14 @@
         <p>Across specialties and modalities.</p>
       </div>
       <div class="types">
-        <div class="type"><h3>Neurophysiology</h3><p>EEG, video-EEG, sleep studies, EMG.</p></div>
+        <div class="type"><h3>Neurophysiology</h3><p>Routine and long-term EEG, video-EEG, EMG, sleep studies.</p></div>
         <div class="type"><h3>Histopathology</h3><p>H&amp;E and IHC slides, whole-slide images.</p></div>
         <div class="type"><h3>Radiology</h3><p>X-ray, CT, MRI, ultrasound, mammography.</p></div>
-        <div class="type"><h3>Cardiology</h3><p>ECG, Holter, echocardiography.</p></div>
+        <div class="type"><h3>Cardiology</h3><p>ECG / EKG, Holter, echocardiography.</p></div>
         <div class="type"><h3>Ophthalmology</h3><p>Fundus photography, OCT, visual fields.</p></div>
         <div class="type"><h3>Dermatology</h3><p>Clinical and dermoscopic images.</p></div>
         <div class="type"><h3>Clinical records</h3><p>Notes, labs, outcomes, de-identified.</p></div>
-        <div class="type"><h3>Something else?</h3><p>If a partner centre produces it, we can usually source it.</p></div>
+        <div class="type"><h3>Any other specialty</h3><p>If a partner hospital produces it, we can source and annotate it.</p></div>
       </div>
     </div>
   </section>
@@ -416,16 +415,17 @@
       <div class="head">
         <div class="k">Programs</div>
         <h2>Recent work.</h2>
+        <p>Multi-site, expert-annotated datasets delivered in neurology and pathology. We run the same model for any specialty.</p>
       </div>
       <div class="prog">
-        <div class="meta">Neurology · EEG<small>Client name withheld</small></div>
-        <div><h3>Multi-centre EEG supply</h3><p>A company building EEG analysis software needed volume and variety. We sourced de-identified recordings from neurology departments across multiple hospitals.</p></div>
-        <div class="fig"><b>3,000+</b><span>EEG recordings delivered</span></div>
+        <div class="meta">Neurology · Long-term EEG<small>Client name withheld</small></div>
+        <div><h3>Multi-site annotated long-term EEG</h3><p>A company building EEG analysis software needed volume and variety. We sourced de-identified long-term EEG recordings from neurology departments across multiple hospitals, annotated by neurologists.</p></div>
+        <div class="fig"><b>3,000+</b><span>Annotated EEG recordings</span></div>
       </div>
       <div class="prog">
-        <div class="meta">Pathology<small>Client name withheld</small></div>
-        <div><h3>Histopathology access</h3><p>A medtech company needed histopathology material for product development. We connected them with pathology partners in our network.</p></div>
-        <div class="fig"><b>Multi-site</b><span>Pathology partners connected</span></div>
+        <div class="meta">Pathology · Histopathology<small>Client name withheld</small></div>
+        <div><h3>Multi-site annotated histopathology</h3><p>A medtech company needed histopathology data for product development. We sourced cases from pathology partners across multiple sites, annotated by pathologists.</p></div>
+        <div class="fig"><b>Multi-site</b><span>Annotated by pathologists</span></div>
       </div>
     </div>
   </section>
@@ -452,13 +452,15 @@
     <div class="w">
       <div class="head">
         <div class="k">Ethics &amp; compliance</div>
-        <h2>Ethically sourced. Fully documented.</h2>
+        <h2>Ethically sourced. Fully documented. FDA-ready.</h2>
       </div>
       <div class="ethics">
         <div class="eth"><h3>Ethics committee approval</h3><p>Cleared by each hospital's ethics committee, following ICMR guidelines.</p></div>
         <div class="eth"><h3>De-identified at source</h3><p>Identifiers removed inside the hospital. Re-identification is contractually banned.</p></div>
         <div class="eth"><h3>Clear agreements</h3><p>Data-use agreements aligned with India's DPDP Act and international privacy rules.</p></div>
         <div class="eth"><h3>Full provenance</h3><p>Source, dates, devices and consent recorded for every dataset.</p></div>
+        <div class="eth"><h3>FDA standards on request</h3><p>Collection and annotation run with documented protocols, audit trails and quality records to support FDA submissions.</p></div>
+        <div class="eth"><h3>Quality-checked annotation</h3><p>Multi-reader review with agreement metrics reported on every batch.</p></div>
       </div>
     </div>
   </section>
@@ -486,6 +488,14 @@
         <details>
           <summary>Is the data exclusive?</summary>
           <p>Non-exclusive by default. Exclusive terms are available, and custom data can be yours alone.</p>
+        </details>
+        <details>
+          <summary>Can the data support an FDA submission?</summary>
+          <p>Yes. On request we run collection and annotation to FDA standards, with documented protocols, audit trails and quality records.</p>
+        </details>
+        <details>
+          <summary>Do you only work in neurology and pathology?</summary>
+          <p>No. Those are our delivered programs so far. Our partner hospitals cover most specialties, including cardiology, radiology, ophthalmology and dermatology.</p>
         </details>
         <details>
           <summary>Can you annotate data we already have?</summary>
@@ -520,7 +530,7 @@
         <div class="row">
           <label>Data type
             <select name="modality">
-              <option>EEG / neurophysiology</option><option>Histopathology</option><option>Radiology</option><option>Cardiology / ECG</option><option>Ophthalmology</option><option>Dermatology</option><option>Clinical records</option><option>Other / multiple</option>
+              <option>EEG / EMG / neurophysiology</option><option>Histopathology</option><option>Radiology</option><option>Cardiology / ECG / EKG</option><option>Ophthalmology</option><option>Dermatology</option><option>Clinical records</option><option>Other / multiple</option>
             </select>
           </label>
           <label>Intended use
