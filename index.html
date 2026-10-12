@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Truthset | Clinical data, sourced to your specification</title>
-<meta name="description" content="Truthset sources licensed and custom-collected clinical data from 40+ partner hospitals and 200+ doctors across India, for medtech, research, pharma and AI teams.">
+<meta name="description" content="Truthset sources licensed, custom-collected and expert-annotated clinical data from 40+ partner hospitals and 200+ doctors across India, for medtech, research, pharma and AI teams.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #0e2a47;
@@ -23,10 +23,10 @@
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-  body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 "Work Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 17px/1.65 "Source Sans 3", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
   p { margin: 0; }
-  h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; color: var(--navy); margin: 0; line-height: 1.08; }
+  h1, h2, h3 { font-family: "Newsreader", Georgia, serif; font-weight: 500; letter-spacing: -.015em; color: var(--navy); margin: 0; line-height: 1.08; }
   .w { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
   @media (min-width: 720px) { .w { padding: 0 40px; } }
   .k { color: var(--gold); font-size: 12px; letter-spacing: .26em; text-transform: uppercase; font-weight: 600; }
@@ -48,8 +48,8 @@
   .links { display: none; gap: 28px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--mut); }
   .links a:hover { color: var(--navy); }
   @media (min-width: 960px) { .links { display: flex; } }
-  .logo { grid-column: 2; text-align: center; font: 600 32px/1 "Cormorant Garamond", serif; color: var(--navy); }
-  .logo small { display: block; font: 600 9.5px "Work Sans", sans-serif; letter-spacing: .32em; color: var(--gold); margin-top: 6px; }
+  .logo { grid-column: 2; text-align: center; font: 600 32px/1 "Newsreader", serif; color: var(--navy); }
+  .logo small { display: block; font: 600 9.5px "Source Sans 3", sans-serif; letter-spacing: .32em; color: var(--gold); margin-top: 6px; }
   nav .btn { grid-column: 3; justify-self: end; padding: 10px 18px; font-size: 12px; }
   @media (max-width: 959px) { nav { grid-template-columns: auto 1fr; } .logo { grid-column: 1; text-align: left; } nav .btn { grid-column: 2; } }
 
@@ -66,7 +66,7 @@
   @media (min-width: 820px) { .panel:nth-child(1), .panel:nth-child(3) { height: 340px; } .panel:nth-child(2) { height: 430px; } }
   .panel svg { position: absolute; left: 0; top: 0; width: 100%; height: calc(100% - 72px); }
   .panel .cap { position: relative; display: flex; justify-content: space-between; align-items: end; gap: 12px; }
-  .panel .cap b { font: 500 26px "Cormorant Garamond", serif; color: #fff; }
+  .panel .cap b { font: 500 26px "Newsreader", serif; color: #fff; }
   .panel .cap span { font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-soft); }
 
   /* Stats band */
@@ -75,17 +75,17 @@
   .stats { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
   .stats > div { border-right: 1px solid rgba(255,255,255,.16); padding: 0 8px; }
   .stats > div:last-child { border: 0; }
-  .n { font: 500 clamp(2.6rem, 6vw, 4.2rem)/1 "Cormorant Garamond", serif; }
+  .n { font: 500 clamp(2.6rem, 6vw, 4.2rem)/1 "Newsreader", serif; }
   .stats .rule { margin: 14px auto; }
   .l { color: #b9c6d6; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
 
   /* Services */
   .services { display: grid; gap: 0; border-top: 1px solid var(--line); }
-  @media (min-width: 860px) { .services { grid-template-columns: 1fr 1fr; } .svc + .svc { border-left: 1px solid var(--line); } }
+  @media (min-width: 960px) { .services { grid-template-columns: repeat(3, 1fr); } .svc + .svc { border-left: 1px solid var(--line); } }
   .svc { padding: 48px 8px 8px; }
-  @media (min-width: 860px) { .svc { padding: 56px 48px 8px; } .svc:first-child { padding-left: 0; } .svc:last-child { padding-right: 0; } }
-  .svc .num { font: 500 22px "Cormorant Garamond", serif; color: var(--gold); }
-  .svc h3 { font-size: 36px; margin: 8px 0 14px; }
+  @media (min-width: 960px) { .svc { padding: 56px 36px 8px; } .svc:first-child { padding-left: 0; } .svc:last-child { padding-right: 0; } }
+  .svc .num { font: 500 22px "Newsreader", serif; color: var(--gold); }
+  .svc h3 { font-size: 32px; margin: 8px 0 14px; }
   .svc p { color: var(--mut); font-size: 17px; }
   .svc ul { list-style: none; padding: 0; margin: 24px 0 0; }
   .svc li { padding: 12px 0; border-top: 1px solid var(--line); font-size: 15px; display: flex; gap: 14px; }
@@ -101,9 +101,23 @@
   .type p { color: var(--mut); font-size: 14.5px; }
   .note { text-align: center; color: var(--mut); margin-top: 36px; font-size: 15px; }
 
+  /* Annotation */
+  .anno { display: grid; gap: 48px; }
+  @media (min-width: 960px) { .anno { grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: start; } }
+  .anno-art { background: var(--navy); position: relative; aspect-ratio: 4 / 4.2; overflow: hidden; }
+  .anno-art svg { width: 100%; height: 100%; display: block; }
+  .kinds { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--line); }
+  @media (min-width: 600px) { .kinds { grid-template-columns: 1fr 1fr; column-gap: 40px; } }
+  .kind { padding: 22px 0; border-bottom: 1px solid var(--line); }
+  .kind h3 { font-size: 23px; margin-bottom: 4px; }
+  .kind p { color: var(--mut); font-size: 15.5px; }
+  .readers { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .readers span { border: 1px solid var(--line); padding: 6px 14px; font-size: 14px; color: var(--navy); background: #fff; }
+  .readers b { width: 100%; font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 4px; }
+
   /* Who */
   .who { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 40px; }
-  .who span { font: 500 clamp(22px, 2.6vw, 30px) "Cormorant Garamond", serif; color: var(--navy); }
+  .who span { font: 500 clamp(22px, 2.6vw, 30px) "Newsreader", serif; color: var(--navy); }
   .who i { color: var(--gold); font-style: normal; }
 
   /* Programs */
@@ -116,14 +130,14 @@
   .prog p { color: var(--mut); }
   .prog .fig { text-align: left; }
   @media (min-width: 860px) { .prog .fig { text-align: right; } }
-  .prog .fig b { display: block; font: 500 52px/1 "Cormorant Garamond", serif; color: var(--navy); }
+  .prog .fig b { display: block; font: 500 52px/1 "Newsreader", serif; color: var(--navy); }
   .prog .fig span { font-size: 13px; color: var(--mut); }
 
   /* Process */
   .steps { display: grid; gap: 32px; counter-reset: s; }
   @media (min-width: 900px) { .steps { grid-template-columns: repeat(5, 1fr); gap: 24px; } }
   .step { border-top: 1px solid var(--navy); padding-top: 20px; }
-  .step::before { counter-increment: s; content: counter(s, upper-roman); font: 500 22px "Cormorant Garamond", serif; color: var(--gold); display: block; margin-bottom: 8px; }
+  .step::before { counter-increment: s; content: counter(s, upper-roman); font: 500 22px "Newsreader", serif; color: var(--gold); display: block; margin-bottom: 8px; }
   .step h3 { font-size: 24px; margin-bottom: 6px; }
   .step p { color: var(--mut); font-size: 15px; }
 
@@ -141,9 +155,9 @@
   .faq { max-width: 820px; margin: 0 auto; }
   details { border-top: 1px solid var(--line); padding: 22px 0; }
   details:last-child { border-bottom: 1px solid var(--line); }
-  summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; font: 500 24px/1.25 "Cormorant Garamond", serif; color: var(--navy); }
+  summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 16px; font: 500 24px/1.25 "Newsreader", serif; color: var(--navy); }
   summary::-webkit-details-marker { display: none; }
-  summary::after { content: "+"; color: var(--gold); font-family: "Work Sans"; font-size: 22px; }
+  summary::after { content: "+"; color: var(--gold); font-family: "Source Sans 3"; font-size: 22px; }
   details[open] summary::after { content: "\2212"; }
   details p { color: var(--mut); margin-top: 10px; }
 
@@ -156,7 +170,7 @@
   .row { display: grid; gap: 16px; }
   @media (min-width: 640px) { .row { grid-template-columns: 1fr 1fr; } }
   label { display: grid; gap: 6px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--mut); font-weight: 500; }
-  input, select, textarea { font: 15px "Work Sans", sans-serif; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 0; padding: 12px; width: 100%; letter-spacing: 0; text-transform: none; }
+  input, select, textarea { font: 15px "Source Sans 3", sans-serif; color: var(--ink); background: var(--paper); border: 1px solid var(--line); border-radius: 0; padding: 12px; width: 100%; letter-spacing: 0; text-transform: none; }
   input:focus, select:focus, textarea:focus { outline: 2px solid var(--gold); outline-offset: 0; }
   textarea { min-height: 120px; resize: vertical; }
   form .btn { justify-self: start; }
@@ -175,6 +189,7 @@
       <div class="links">
         <a href="#services">Services</a>
         <a href="#data">Data</a>
+        <a href="#annotation">Annotation</a>
         <a href="#programs">Programs</a>
         <a href="#faq">FAQ</a>
       </div>
@@ -190,7 +205,7 @@
     <div class="hero">
       <div class="k">A clinical data partner</div>
       <h1>Clinical data, sourced to your specification.</h1>
-      <p class="lede">Licensed and custom-collected medical data from 40+ partner hospitals and 200+ doctors across India.</p>
+      <p class="lede">Licensed, custom-collected and expertly annotated medical data from 40+ partner hospitals and 200+ doctors across India.</p>
       <div class="ctas">
         <a class="btn btn-fill" href="#contact">Discuss a dataset</a>
         <a class="btn btn-line" href="#services">How it works</a>
@@ -263,8 +278,8 @@
     <div class="w">
       <div class="head">
         <div class="k">Services</div>
-        <h2>Two ways to get the data you need.</h2>
-        <p>License what already exists, or have it collected to order. We handle the hospitals, approvals and logistics.</p>
+        <h2>Source it, collect it, label it.</h2>
+        <p>License what already exists, have it collected to order, and have it annotated by specialists. We handle the hospitals, approvals and logistics.</p>
       </div>
       <div class="services">
         <div class="svc">
@@ -285,8 +300,19 @@
           <ul>
             <li>Protocol designed with clinicians</li>
             <li>Consented, prospective collection</li>
-            <li>Specialist annotation</li>
+            <li>Patient criteria you define</li>
             <li>Rolling, quality-checked deliveries</li>
+          </ul>
+        </div>
+        <div class="svc">
+          <div class="num">III.</div>
+          <h3>Annotate it with experts</h3>
+          <p>Custom labels built to your guidelines by practising specialists, on our data or yours.</p>
+          <ul>
+            <li>Annotators matched by specialty</li>
+            <li>Guidelines agreed with you up front</li>
+            <li>Multi-reader review and adjudication</li>
+            <li>Agreement metrics with every batch</li>
           </ul>
         </div>
       </div>
@@ -308,14 +334,66 @@
         <div class="type"><h3>Ophthalmology</h3><p>Fundus photography, OCT, visual fields.</p></div>
         <div class="type"><h3>Dermatology</h3><p>Clinical and dermoscopic images.</p></div>
         <div class="type"><h3>Clinical records</h3><p>Notes, labs, outcomes, de-identified.</p></div>
-        <div class="type"><h3>Annotation</h3><p>Labels and reads by specialists.</p></div>
+        <div class="type"><h3>Something else?</h3><p>If a partner centre produces it, we can usually source it.</p></div>
       </div>
-      <p class="note">Need something else? Ask. If a partner centre produces it, we can usually source it.</p>
+    </div>
+  </section>
+
+  <!-- Annotation -->
+  <section id="annotation">
+    <div class="w">
+      <div class="head">
+        <div class="k">Expert annotation</div>
+        <h2>Labelled by the specialists who read these cases every day.</h2>
+        <p>Our 200+ partner doctors build custom annotations to your guidelines, on data we source or data you already have.</p>
+      </div>
+      <div class="anno">
+        <div class="anno-art" aria-hidden="true">
+          <svg viewBox="0 0 400 420">
+            <g fill="none" stroke="#ffffff" stroke-opacity=".25">
+              <ellipse cx="200" cy="200" rx="150" ry="168"/>
+              <ellipse cx="200" cy="200" rx="122" ry="140" stroke-opacity=".15"/>
+              <path d="M200 40c-46 34-66 84-60 140s30 98 60 132c30-34 54-76 60-132s-14-106-60-140z"/>
+            </g>
+            <g fill="none" stroke="#e9dcc0" stroke-width="1.6" stroke-dasharray="5 4">
+              <path d="M226 128c22-6 44 8 48 30s-10 44-32 48-42-8-46-28 8-44 30-50z"/>
+            </g>
+            <g fill="none" stroke="#b08a3e" stroke-width="1.6">
+              <rect x="112" y="226" width="62" height="54"/>
+            </g>
+            <g font-family="Source Sans 3, sans-serif" font-size="11" letter-spacing="1.2">
+              <path d="M272 150 L318 112" stroke="#e9dcc0" stroke-width="1"/>
+              <rect x="300" y="88" width="88" height="24" fill="#e9dcc0"/>
+              <text x="344" y="104" text-anchor="middle" fill="#0e2a47" font-weight="600">REGION A</text>
+              <path d="M112 280 L74 320" stroke="#b08a3e" stroke-width="1"/>
+              <rect x="12" y="320" width="96" height="24" fill="#b08a3e"/>
+              <text x="60" y="336" text-anchor="middle" fill="#ffffff" font-weight="600">FINDING · G2</text>
+            </g>
+            <g font-family="Source Sans 3, sans-serif" font-size="12" fill="#b9c6d6">
+              <text x="20" y="400">Reader 1 ✓   Reader 2 ✓   Adjudicated</text>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <div class="kinds">
+            <div class="kind"><h3>Segmentation</h3><p>Outlines of lesions, organs and tissue regions.</p></div>
+            <div class="kind"><h3>Classification</h3><p>Diagnosis, grade and severity labels.</p></div>
+            <div class="kind"><h3>Event marking</h3><p>Seizures, spikes, arrhythmias and sleep stages on recordings.</p></div>
+            <div class="kind"><h3>Detection</h3><p>Bounding boxes and keypoints on images and slides.</p></div>
+            <div class="kind"><h3>Report structuring</h3><p>Free-text reports turned into structured fields.</p></div>
+            <div class="kind"><h3>Reference standards</h3><p>Multi-reader reads with adjudication, for validation studies.</p></div>
+          </div>
+          <div class="readers">
+            <b>Annotated by</b>
+            <span>Radiologists</span><span>Pathologists</span><span>Neurologists</span><span>Cardiologists</span><span>Ophthalmologists</span><span>Dermatologists</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Who -->
-  <section>
+  <section class="alt">
     <div class="w">
       <div class="head">
         <div class="k">Who we work with</div>
@@ -332,7 +410,7 @@
   </section>
 
   <!-- Programs -->
-  <section id="programs" class="alt">
+  <section id="programs">
     <div class="w">
       <div class="head">
         <div class="k">Programs</div>
@@ -352,7 +430,7 @@
   </section>
 
   <!-- Process -->
-  <section>
+  <section class="alt">
     <div class="w">
       <div class="head">
         <div class="k">Process</div>
@@ -409,6 +487,10 @@
           <p>Non-exclusive by default. Exclusive terms are available, and custom data can be yours alone.</p>
         </details>
         <details>
+          <summary>Can you annotate data we already have?</summary>
+          <p>Yes. Send us your data under a data agreement and our specialists will label it to your guidelines.</p>
+        </details>
+        <details>
           <summary>Do you work with smaller teams?</summary>
           <p>Yes. We work with startups, research groups and large companies, and can scope small pilot datasets.</p>
         </details>
@@ -447,7 +529,7 @@
           </label>
         </div>
         <label>Engagement
-          <select name="engagement"><option>License existing data</option><option>Custom collection</option><option>Not sure yet</option></select>
+          <select name="engagement"><option>License existing data</option><option>Custom collection</option><option>Expert annotation</option><option>A combination</option><option>Not sure yet</option></select>
         </label>
         <label>Brief<textarea name="brief" placeholder="Volume, criteria, timelines..."></textarea></label>
         <button class="btn btn-fill" type="submit">Send brief</button>
