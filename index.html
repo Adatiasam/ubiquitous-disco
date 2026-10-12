@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Setu Health Data — Clinical data from India for AI</title>
-<meta name="description" content="Setu Health Data connects AI labs and medtech companies in the USA and UK with a network of hospitals and clinics across India — for licensed retrospective datasets and custom, prospectively collected medical data.">
+<title>Truthset — Clinical data from India for AI</title>
+<meta name="description" content="Truthset connects AI labs and medtech companies in the USA and UK with a network of hospitals and clinics across India — for licensed retrospective datasets and custom, prospectively collected medical data.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -188,13 +188,13 @@
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a class="logo" href="#top" aria-label="Setu Health Data home">
+    <a class="logo" href="#top" aria-label="Truthset home">
       <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true">
         <rect width="32" height="32" rx="8" fill="var(--accent)"/>
-        <path d="M6 21c3-7 7-10 10-10s7 3 10 10" fill="none" stroke="var(--accent-ink)" stroke-width="2.2" stroke-linecap="round"/>
-        <path d="M10 21v-4M16 21v-8M22 21v-4" stroke="var(--accent-ink)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M8 10h16M8 16h9M8 22h5" stroke="var(--accent-ink)" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="m17 21 2.6 2.6L25 18" fill="none" stroke="var(--accent-ink)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      Setu Health Data
+      Truthset
     </a>
     <nav class="nav-links" aria-label="Primary">
       <a href="#services">Services</a>
@@ -270,7 +270,7 @@
             <text x="372" y="216" text-anchor="middle" font-size="9" fill="var(--ink-3)">Medtech</text>
           </g>
         </svg>
-        <div class="route-caption"><span>Source</span><span>Setu</span><span>Your team</span></div>
+        <div class="route-caption"><span>Source</span><span>Truthset</span><span>Your team</span></div>
       </div>
     </div>
   </section>
@@ -519,11 +519,12 @@
         <h2>Tell us what your model needs.</h2>
         <p class="lede">Share a short brief and we'll come back with a feasibility view — sources, timelines and an indicative price.</p>
         <div class="contact-points">
-          <div>✉️ <a href="mailto:hello@setuhealthdata.com">hello@setuhealthdata.com</a></div>
+          <div>🔒 Briefs go straight to our partnerships team</div>
           <div>🌍 Serving teams in the USA &amp; UK, sourcing across India</div>
         </div>
       </div>
       <form id="brief" novalidate>
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
         <div class="row">
           <label>Name<input name="name" required autocomplete="name"></label>
           <label>Work email<input name="email" type="email" required autocomplete="email"></label>
@@ -546,7 +547,7 @@
         </div>
         <label>Brief<textarea name="brief" placeholder="Volume, labels, inclusion criteria, timelines, intended use…"></textarea></label>
         <button class="btn btn-primary" type="submit">Send brief</button>
-        <p class="form-note" id="form-note">This opens your email client with the brief filled in. Please don't include patient information.</p>
+        <p class="form-note" id="form-note">Please don't include any patient information in your brief.</p>
       </form>
     </div>
   </section>
@@ -554,34 +555,43 @@
 
 <footer>
   <div class="wrap foot">
-    <span>© <span id="yr"></span> Setu Health Data</span>
+    <span>© <span id="yr"></span> Truthset</span>
     <span>Connecting clinical data from India with AI teams worldwide.</span>
   </div>
 </footer>
 
 <script>
   document.getElementById('yr').textContent = new Date().getFullYear();
-  var CONTACT_EMAIL = 'hello@setuhealthdata.com';
+  // Form submissions are delivered by FormSubmit (formsubmit.co) to the inbox below.
+  // Once a domain + mailbox exist, swap this for the new address (or FormSubmit's random alias).
+  var FORM_ENDPOINT = 'https://formsubmit.co/ajax/adatiasam@gmail.com';
   document.getElementById('brief').addEventListener('submit', function (e) {
     e.preventDefault();
-    var f = e.target, note = document.getElementById('form-note');
-    if (!f.name.value.trim() || !f.email.checkValidity() || !f.email.value) {
+    var f = e.target, note = document.getElementById('form-note'), btn = f.querySelector('button');
+    if (!f.name.value.trim() || !f.email.value || !f.email.checkValidity()) {
       note.textContent = 'Please add your name and a valid work email.';
       return;
     }
-    var body = [
-      'Name: ' + f.name.value,
-      'Email: ' + f.email.value,
-      'Company: ' + f.company.value,
-      'Country: ' + f.country.value,
-      'Data type: ' + f.modality.value,
-      'Engagement: ' + f.engagement.value,
-      '',
-      f.brief.value
-    ].join('\n');
-    var subject = 'Data request — ' + (f.company.value || f.name.value);
-    window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    note.textContent = 'Opening your email client…';
+    btn.disabled = true; note.textContent = 'Sending…';
+    fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        _subject: 'Truthset data request — ' + (f.company.value || f.name.value),
+        _template: 'table',
+        _captcha: 'false',
+        _honey: f._honey.value,
+        name: f.name.value, email: f.email.value, company: f.company.value,
+        country: f.country.value, data_type: f.modality.value,
+        engagement: f.engagement.value, brief: f.brief.value
+      })
+    }).then(function (r) { return r.json(); }).then(function (d) {
+      if (String(d.success) !== 'true') throw new Error(d.message || 'failed');
+      f.reset();
+      note.textContent = 'Thanks — your brief is in. We\'ll be in touch shortly.';
+    }).catch(function () {
+      note.textContent = 'Something went wrong sending your brief. Please try again in a moment.';
+    }).finally(function () { btn.disabled = false; });
   });
 </script>
 </body>
