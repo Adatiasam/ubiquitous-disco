@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Truthset | Clinical data from India for AI</title>
-<meta name="description" content="Truthset connects AI labs and medtech companies in the USA and UK with a network of hospitals and clinics across India, for licensed and custom-built medical datasets.">
+<meta name="description" content="Truthset connects AI labs and medtech companies with 40+ hospitals and clinics across India, for licensed and custom-built medical datasets.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -89,11 +89,10 @@
 
   /* Stats */
   .stats { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 0; background: var(--surface); }
-  .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
-  @media (min-width: 820px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
-  .stat { padding: 28px 20px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-  .stat:nth-child(2n) { border-right: 0; }
-  @media (min-width: 820px) { .stat { border-bottom: 0; } .stat:nth-child(2n) { border-right: 1px solid var(--line); } .stat:last-child { border-right: 0; } }
+  .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stat { padding: 28px 20px; border-right: 1px solid var(--line); }
+  .stat:last-child { border-right: 0; }
+  @media (max-width: 560px) { .stat { padding: 22px 12px; } .stat-num { font-size: 1.7rem; } }
   .stat-num { font-family: Fraunces, Georgia, serif; font-size: 2.2rem; font-weight: 600; }
   .stat-label { color: var(--ink-2); font-size: .9rem; }
 
@@ -212,7 +211,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">Clinical data partner for AI teams in the US &amp; UK</div>
+        <div class="eyebrow">Clinical data partner for AI teams</div>
         <h1>Real-world medical data from India's hospitals, <em>ready for your models.</em></h1>
         <p class="lede">Licensed and custom-built clinical datasets from 40+ hospitals across India.</p>
         <div class="hero-ctas">
@@ -222,9 +221,9 @@
         <p class="hero-note">Ethics-approved · De-identified at source</p>
       </div>
 
-      <div class="route" aria-label="Diagram: data flows from 40+ Indian hospitals through Truthset to AI teams in the USA and UK">
+      <div class="route" aria-label="Diagram: data flows from 40+ Indian hospitals through Truthset to AI labs and medtech teams">
         <svg viewBox="0 0 440 250" role="img">
-          <title>40+ hospitals in India connected through Truthset to AI teams in the USA and UK</title>
+          <title>40+ hospitals in India connected through Truthset to AI labs and medtech teams</title>
           <defs>
             <linearGradient id="g" x1="0" x2="1">
               <stop offset="0" stop-color="var(--accent)"/>
@@ -262,11 +261,9 @@
           </g>
           <g font-family="Inter, sans-serif">
             <rect x="356" y="56" width="72" height="44" rx="10" fill="var(--surface-2)" stroke="var(--line)"/>
-            <text x="392" y="75" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)">USA</text>
-            <text x="392" y="90" text-anchor="middle" font-size="10" fill="var(--ink-3)">AI labs</text>
+            <text x="392" y="82" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">AI labs</text>
             <rect x="356" y="150" width="72" height="44" rx="10" fill="var(--surface-2)" stroke="var(--line)"/>
-            <text x="392" y="169" text-anchor="middle" font-size="13" font-weight="600" fill="var(--ink)">UK</text>
-            <text x="392" y="184" text-anchor="middle" font-size="10" fill="var(--ink-3)">Medtech</text>
+            <text x="392" y="176" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--ink)">Medtech</text>
           </g>
         </svg>
       </div>
@@ -276,10 +273,9 @@
   <!-- Stats -->
   <section class="stats" aria-label="Track record">
     <div class="wrap stats-grid">
-      <div class="stat"><div class="stat-num">3,000+</div><div class="stat-label">EEGs delivered</div></div>
       <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Partner hospitals</div></div>
-      <div class="stat"><div class="stat-num">7+</div><div class="stat-label">Cities</div></div>
-      <div class="stat"><div class="stat-num">US · UK</div><div class="stat-label">Buyers served</div></div>
+      <div class="stat"><div class="stat-num">7+</div><div class="stat-label">Cities across India</div></div>
+      <div class="stat"><div class="stat-num">2</div><div class="stat-label">Ways to work: license or build</div></div>
     </div>
   </section>
 
@@ -417,7 +413,7 @@
         </div>
         <div class="card">
           <h3>Cost-effective collection</h3>
-          <p>Collection and annotation at a fraction of US/UK cost.</p>
+          <p>Collection and annotation at a fraction of typical cost.</p>
         </div>
       </div>
       <div class="who" aria-label="Who we work with">
@@ -462,7 +458,7 @@
         </div>
         <div class="comp-item">
           <div class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7l5 5v11a2 2 0 0 1-2 2Z"/><path d="m9 15 2 2 4-4"/></svg></div>
-          <div><h3>Clear data agreements</h3><p>Agreements written with India's DPDP Act and UK GDPR in mind.</p></div>
+          <div><h3>Clear data agreements</h3><p>Agreements aligned with India's DPDP Act and international privacy rules.</p></div>
         </div>
         <div class="comp-item">
           <div class="mod-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/><circle cx="12" cy="12" r="9"/></svg></div>
@@ -513,7 +509,7 @@
         <p class="lede">Send a short brief. We'll reply with sources, timeline and price.</p>
         <div class="contact-points">
           <div>🔒 Briefs go straight to our partnerships team</div>
-          <div>🌍 Serving teams in the USA &amp; UK, sourcing across India</div>
+          <div>🌍 Sourcing across India for teams worldwide</div>
         </div>
       </div>
       <form id="brief" novalidate>
