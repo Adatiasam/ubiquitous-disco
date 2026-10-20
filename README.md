@@ -1,4 +1,4 @@
-# ubiquitous-disco
+# Benchmark Med Labs website
 ## Landing page
 
 `index.html` is a self-contained static landing page (no build step). Open it in a browser or deploy to any static host (GitHub Pages, Netlify, Vercel).

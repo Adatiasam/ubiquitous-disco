@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Truthset | Clinical data you can build on</title>
-<meta name="description" content="Truthset sources licensed, custom-collected and expert-annotated clinical data, to FDA standards on request, from 40+ partner hospitals and 200+ doctors across India, for medtech, research, pharma and AI teams.">
+<title>Benchmark Med Labs | Clinical data you can build on</title>
+<meta name="description" content="Benchmark Med Labs sources licensed, custom-collected and expert-annotated clinical data in any specialty, built to FDA, HIPAA and UK GDPR standards, from 40+ partner hospitals and 200+ doctors across India, for medtech, research, pharma and AI teams.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
@@ -80,6 +80,17 @@
   .stats .rule { margin: 14px auto; }
   .l { color: #b9c6d6; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
 
+  /* Standards */
+  .std-sec { padding: 72px 0 0; }
+  .std { display: grid; gap: 0; border-top: 1px solid var(--navy); }
+  @media (min-width: 600px) { .std { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1000px) { .std { grid-template-columns: repeat(4, 1fr); } }
+  .std > div { padding: 24px 24px 24px 0; }
+  .std b { display: block; font: 500 28px/1.1 "Newsreader", serif; color: var(--navy); margin-bottom: 6px; }
+  .std p { color: var(--mut); font-size: 15px; }
+  .std-head { text-align: center; margin-bottom: 32px; }
+  .std-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); margin-top: 12px; }
+
   /* Services */
   .services { display: grid; gap: 0; border-top: 1px solid var(--line); }
   @media (min-width: 960px) { .services { grid-template-columns: repeat(3, 1fr); } .svc + .svc { border-left: 1px solid var(--line); } }
@@ -124,14 +135,14 @@
   /* Programs */
   .prog { display: grid; gap: 20px; border-top: 1px solid var(--line); padding: 40px 0; }
   .prog:last-child { border-bottom: 1px solid var(--line); }
-  @media (min-width: 860px) { .prog { grid-template-columns: 220px 1fr 240px; gap: 48px; align-items: start; } }
+  @media (min-width: 860px) { .prog { grid-template-columns: 220px 1fr 270px; gap: 48px; align-items: start; } }
   .prog .meta { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
   .prog .meta small { display: block; color: var(--mut); letter-spacing: .04em; text-transform: none; font-weight: 400; font-size: 14px; margin-top: 6px; }
   .prog h3 { font-size: 30px; margin-bottom: 10px; }
   .prog p { color: var(--mut); }
   .prog .fig { text-align: left; }
   @media (min-width: 860px) { .prog .fig { text-align: right; } }
-  .prog .fig b { display: block; font: 500 52px/1 "Newsreader", serif; color: var(--navy); }
+  .prog .fig b { display: block; white-space: nowrap; font: 500 46px/1 "Newsreader", serif; color: var(--navy); }
   .prog .fig span { font-size: 13px; color: var(--mut); }
 
   /* Process */
@@ -194,7 +205,7 @@
         <a href="#programs">Programs</a>
         <a href="#faq">FAQ</a>
       </div>
-      <a class="logo" href="#top">Truthset<small>CLINICAL DATA</small></a>
+      <a class="logo" href="#top">Benchmark<small>MED LABS</small></a>
       <a class="btn btn-line" href="#contact">Request data</a>
     </nav>
   </div>
@@ -211,7 +222,7 @@
         <a class="btn btn-fill" href="#contact">Discuss a dataset</a>
         <a class="btn btn-line" href="#services">How it works</a>
       </div>
-      <p class="trust">FDA-standard collection on request · Ethics-approved · De-identified at source</p>
+      <p class="trust">Any specialty · Built to FDA, HIPAA and UK GDPR standards · Ethics-approved</p>
     </div>
 
     <div class="panels" aria-hidden="true">
@@ -272,6 +283,22 @@
     </div>
   </div>
 
+  <!-- Standards -->
+  <section class="std-sec" id="standards">
+    <div class="w">
+      <div class="std-head">
+        <div class="k">Any specialty. Built to standard.</div>
+        <h2>Whatever the specialty, we build it to the standard your market requires.</h2>
+      </div>
+      <div class="std">
+        <div><b>Any specialty</b><p>Neurology, pathology, cardiology, radiology and beyond, across 40+ partner hospitals.</p></div>
+        <div><b>FDA</b><p>Documented protocols, audit trails and quality records to support US regulatory submissions.</p></div>
+        <div><b>HIPAA</b><p>De-identification to HIPAA standards before any data leaves the hospital.</p></div>
+        <div><b>UK GDPR</b><p>Processing and transfer aligned with UK GDPR and the Data Protection Act 2018.</p></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Services -->
   <section id="services">
     <div class="w">
@@ -299,7 +326,7 @@
           <ul>
             <li>Protocol designed with clinicians</li>
             <li>Consented, prospective collection</li>
-            <li>Run to FDA standards on request</li>
+            <li>Built to FDA, HIPAA and UK GDPR standards</li>
             <li>Rolling, quality-checked deliveries</li>
           </ul>
         </div>
@@ -415,12 +442,17 @@
       <div class="head">
         <div class="k">Programs</div>
         <h2>Recent work.</h2>
-        <p>Multi-site, expert-annotated datasets delivered in neurology and pathology. We run the same model for any specialty.</p>
+        <p>Multi-site, expert-annotated datasets delivered in neurology and pathology, including one built from scratch. We run the same model for any specialty.</p>
       </div>
       <div class="prog">
         <div class="meta">Neurology · Long-term EEG<small>Client name withheld</small></div>
         <div><h3>Multi-site annotated long-term EEG</h3><p>A company building EEG analysis software needed volume and variety. We sourced de-identified long-term EEG recordings from neurology departments across multiple hospitals, annotated by neurologists.</p></div>
         <div class="fig"><b>3,000+</b><span>Annotated EEG recordings</span></div>
+      </div>
+      <div class="prog">
+        <div class="meta">Neurology · Custom EEG<small>Client name withheld</small></div>
+        <div><h3>An EEG dataset built from scratch</h3><p>The data a client needed didn't exist anywhere. We designed the collection with neurologists, recorded it across partner sites to their exact requirements, and had every recording annotated by multiple neurologists.</p></div>
+        <div class="fig"><b>Multi-reader</b><span>Annotated by multiple neurologists</span></div>
       </div>
       <div class="prog">
         <div class="meta">Pathology · Histopathology<small>Client name withheld</small></div>
@@ -452,14 +484,14 @@
     <div class="w">
       <div class="head">
         <div class="k">Ethics &amp; compliance</div>
-        <h2>Ethically sourced. Fully documented. FDA-ready.</h2>
+        <h2>Ethically sourced. Fully documented. Compliance-ready.</h2>
       </div>
       <div class="ethics">
         <div class="eth"><h3>Ethics committee approval</h3><p>Cleared by each hospital's ethics committee, following ICMR guidelines.</p></div>
-        <div class="eth"><h3>De-identified at source</h3><p>Identifiers removed inside the hospital. Re-identification is contractually banned.</p></div>
-        <div class="eth"><h3>Clear agreements</h3><p>Data-use agreements aligned with India's DPDP Act and international privacy rules.</p></div>
+        <div class="eth"><h3>De-identified at source</h3><p>Identifiers removed inside the hospital to HIPAA standards. Re-identification is contractually banned.</p></div>
+        <div class="eth"><h3>Clear agreements</h3><p>Data-use agreements aligned with India's DPDP Act, UK GDPR and the Data Protection Act 2018.</p></div>
         <div class="eth"><h3>Full provenance</h3><p>Source, dates, devices and consent recorded for every dataset.</p></div>
-        <div class="eth"><h3>FDA standards on request</h3><p>Collection and annotation run with documented protocols, audit trails and quality records to support FDA submissions.</p></div>
+        <div class="eth"><h3>FDA-ready documentation</h3><p>Collection and annotation run with documented protocols, audit trails and quality records to support FDA submissions.</p></div>
         <div class="eth"><h3>Quality-checked annotation</h3><p>Multi-reader review with agreement metrics reported on every batch.</p></div>
       </div>
     </div>
@@ -490,8 +522,8 @@
           <p>Non-exclusive by default. Exclusive terms are available, and custom data can be yours alone.</p>
         </details>
         <details>
-          <summary>Can the data support an FDA submission?</summary>
-          <p>Yes. On request we run collection and annotation to FDA standards, with documented protocols, audit trails and quality records.</p>
+          <summary>Can the data support FDA, HIPAA and UK requirements?</summary>
+          <p>Yes. We build datasets in any specialty to FDA standards, de-identify to HIPAA standards, and handle processing and transfer in line with UK GDPR and the Data Protection Act 2018.</p>
         </details>
         <details>
           <summary>Do you only work in neurology and pathology?</summary>
@@ -552,8 +584,8 @@
 
 <footer>
   <div class="w foot">
-    <a class="logo" href="#top">Truthset</a>
-    <span>© <span id="yr"></span> Truthset. Ground truth, from real hospitals.</span>
+    <a class="logo" href="#top">Benchmark Med Labs</a>
+    <span>© <span id="yr"></span> Benchmark Med Labs. Ground truth, from real hospitals.</span>
   </div>
 </footer>
 
@@ -574,7 +606,7 @@
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        _subject: 'Truthset data request: ' + (f.company.value || f.name.value),
+        _subject: 'Benchmark Med Labs data request: ' + (f.company.value || f.name.value),
         _template: 'table',
         _captcha: 'false',
         _honey: f._honey.value,
