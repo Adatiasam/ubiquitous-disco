@@ -256,6 +256,9 @@ h3 { font-size: 1.5rem; line-height: 2rem; letter-spacing: -0.01em; }
 .prog .meta span { display: block; margin-top: var(--s-75); font-size: .875rem; line-height: 1.25rem; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--mut); }
 .prog h3 { font-size: 1.875rem; line-height: 2.25rem; }
 .prog p { margin-top: var(--s-100); color: var(--mut); }
+.facts { list-style: none; display: flex; flex-wrap: wrap; gap: var(--s-75); padding: 0; margin: var(--s-200) 0 0; }
+.facts li { padding: var(--s-50) var(--s-100); border: 1px solid var(--line); border-radius: 9999px; background: var(--white); font-size: .875rem; line-height: 1.25rem; color: var(--mut); }
+.facts b { color: var(--navy); font-weight: 600; }
 .prog .fig b { display: block; font: 500 3rem/1 var(--serif); letter-spacing: -0.02em; color: var(--navy); white-space: nowrap; }
 .prog .fig span { display: block; margin-top: var(--s-75); font-size: .875rem; line-height: 1.25rem; color: var(--mut); }
 @media (min-width: 900px) { .prog .fig { text-align: right; } }
