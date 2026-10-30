@@ -123,29 +123,29 @@
       e.preventDefault();
       var ok = Object.keys(rules).map(check).every(Boolean);
       if (!ok) { form.querySelector('[aria-invalid="true"]').focus(); return; }
-      if (form.elements._honey.value) return;
+      if (form.elements.botcheck.checked) return;
       btn.disabled = true; btnLabel.textContent = 'Sending your brief';
       status.className = 'form-status'; status.textContent = '';
       var f = form.elements;
-      fetch(ENDPOINT, {
+      fetch(form.action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          _subject: 'Physeia Data Labs feasibility request: ' + (f.company.value || f.name.value),
-          _template: 'table', _captcha: 'false',
+          access_key: f.access_key.value,
+          subject: 'Physeia Data Labs feasibility request: ' + (f.company.value || f.name.value),
+          from_name: f.from_name.value, replyto: f.email.value,
           name: f.name.value, email: f.email.value, company: f.company.value, country: f.country.value,
           data_type: f.modality.value, intended_use: f.use.value, engagement: f.engagement.value,
           standards: f.standard.value, brief: f.brief.value
         })
       }).then(function (r) { return r.json(); }).then(function (d) {
-        if (String(d.success) !== 'true') throw new Error(d.message || 'rejected');
+        if (!d.success) throw new Error(d.message || 'rejected');
         form.hidden = true; success.classList.add('show'); success.focus();
       }).catch(function (err) {
-        // Background send failed: fall back to a normal form post. FormSubmit then
-        // shows its own page (activation, spam check or error) and redirects back.
-        if (window.console) console.error('Form submit failed, falling back to page post:', err);
-        f._subject.value = 'Physeia Data Labs feasibility request: ' + (f.company.value || f.name.value);
-        HTMLFormElement.prototype.submit.call(form);
+        if (window.console) console.error('Form submit failed:', err);
+        var why = err && err.message && err.message !== 'rejected' && !/fetch|network|json/i.test(err.message) ? ' (' + err.message + ')' : '';
+        status.className = 'form-status error';
+        status.textContent = 'We could not send your brief. Please try again, or email hello@physeiadatalab.com.' + why;
       }).finally(function () { btn.disabled = false; btnLabel.textContent = 'Request a feasibility review'; });
     });
   }

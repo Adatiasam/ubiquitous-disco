@@ -13,7 +13,7 @@ Static site, no build step. Deploys as is on GitHub Pages (or any static host). 
 
 ## Contact form
 
-The form posts to [FormSubmit](https://formsubmit.co), which forwards each brief by email. The endpoint is the `data-endpoint` attribute on `<form id="brief">` in `index.html`. Briefs go to contact@physeiadatalab.com (Zoho Mail). The public address shown on the site is hello@physeiadatalab.com. FormSubmit only accepts submissions from domains it has activated; if the site moves to a new domain, submit the form once and click the activation link FormSubmit emails. Failed submissions log the reason to the browser console.
+The form posts to [Web3Forms](https://web3forms.com), which emails each brief to contact@physeiadatalab.com (Zoho Mail). The access key is the hidden `access_key` input in `<form id="brief">` in `index.html`; it is safe to be public, as it can only send to that inbox. Manage it at web3forms.com. The public address shown on the site is hello@physeiadatalab.com. Without JavaScript the form posts directly and Web3Forms redirects back to `/?sent=1`, which shows the thank you message.
 
 ## Credits
 
