@@ -362,3 +362,59 @@ h3 { font-size: 1.5rem; line-height: 2rem; letter-spacing: -0.01em; }
 @media (prefers-reduced-transparency: reduce) {
   .nav, .menu { background: var(--paper); backdrop-filter: none; -webkit-backdrop-filter: none; }
 }
+
+/* ---- Redesign: buyer-first sections ---- */
+ul.proof { list-style: none; margin-left: 0; padding-left: 0; padding-right: 0; padding-bottom: 0; }
+ul.proof li { margin: 0; }
+
+/* Track record */
+.case { display: grid; gap: var(--s-500); padding: var(--s-500); border: 1px solid var(--line); border-radius: 16px; background: var(--white); }
+@media (min-width: 960px) { .case { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: var(--s-600); padding: var(--s-600); } }
+.case-meta { font-size: .75rem; line-height: 1rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-text); }
+.case-copy p + p { margin-top: var(--s-200); }
+.case-copy p:not(.case-meta) { color: var(--ink); font-size: 1.125rem; line-height: 1.75rem; }
+.case-copy .case-meta + p { margin-top: var(--s-200); }
+.case-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; border-top: 1px solid var(--line); }
+.case-facts > div { padding: var(--s-200) var(--s-200) var(--s-200) 0; border-bottom: 1px solid var(--line); }
+.case-facts dt { font-size: .75rem; line-height: 1rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--mut); }
+.case-facts dd { margin: var(--s-50) 0 0; font: 500 1.25rem/1.75rem var(--serif); color: var(--navy); }
+.case-small { margin-top: var(--s-300); padding: var(--s-300) var(--s-500); border: 1px solid var(--line); border-radius: 16px; background: var(--paper); }
+.case-small p:not(.case-meta) { margin-top: var(--s-75); color: var(--mut); }
+@media (max-width: 639px) { .case, .case-small { padding: var(--s-300); } .case-facts { grid-template-columns: 1fr; } }
+
+/* Services detail */
+.svc > p { margin-top: var(--s-100); }
+.cap-grid { display: grid; gap: var(--s-500); margin-top: var(--s-600); padding-top: var(--s-500); border-top: 1px solid var(--line); }
+@media (min-width: 900px) { .cap-grid { grid-template-columns: 1fr 1fr; gap: var(--s-700); } }
+.cap-h { font-size: 1.5rem; line-height: 2rem; }
+.cap-list { list-style: none; margin: var(--s-200) 0 0; padding: 0; }
+.cap-list li { display: grid; gap: var(--s-25); padding: var(--s-100) 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 640px) { .cap-list li { grid-template-columns: 220px 1fr; gap: var(--s-200); } }
+.cap-list b { font-weight: 600; color: var(--navy); }
+.cap-list span { color: var(--mut); }
+
+/* Compliance */
+.comp-grid { display: grid; gap: var(--s-300); }
+@media (min-width: 1024px) { .comp-grid { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); align-items: start; } }
+@media (min-width: 1024px) { .comp-grid .std { grid-template-columns: 1fr 1fr; } }
+.docs { padding: var(--s-400); border-radius: 16px; background: var(--navy); color: var(--white); }
+.docs h3 { color: var(--white); font-size: 1.5rem; line-height: 2rem; }
+.docs ul { list-style: none; margin: var(--s-300) 0 0; padding: 0; display: grid; gap: var(--s-100); }
+.docs li { display: flex; gap: var(--s-100); }
+.docs li .icon-sm { color: var(--gold-light); margin-top: var(--s-25); }
+.docs > p { margin-top: var(--s-300); padding-top: var(--s-200); border-top: 1px solid var(--line-dark); color: var(--mut-dark); font-size: 1rem; line-height: 1.5rem; }
+
+/* Process timing */
+.step::before { display: none; }
+.step .when { display: inline-block; font-size: .75rem; line-height: 1rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-text); }
+.step h3 { margin-top: var(--s-200); }
+.note-line { margin-top: var(--s-300); color: var(--mut); font-size: 1rem; }
+
+/* Team */
+.team { display: grid; gap: var(--s-300); }
+@media (min-width: 768px) { .team { grid-template-columns: 1fr 1fr; } }
+.person { padding: var(--s-400); border: 1px solid var(--line); border-radius: 16px; background: var(--white); }
+.person .photo { width: 96px; height: 96px; border-radius: 9999px; object-fit: cover; margin-bottom: var(--s-300); }
+.person h3 { font-size: 1.875rem; line-height: 2.25rem; }
+.person .role { margin-top: var(--s-75); font-size: .875rem; line-height: 1.25rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-text); }
+.person p:not(.role) { margin-top: var(--s-100); color: var(--mut); }
