@@ -330,10 +330,15 @@ h3 { font-size: 1.5rem; line-height: 2rem; letter-spacing: -0.01em; }
 .form-note { font-size: .875rem; line-height: 1.25rem; color: var(--mut); }
 .form-status { font-size: .875rem; line-height: 1.25rem; }
 .form-status.error { color: var(--danger); }
+.form[hidden] { display: none; }
+.form.leaving { opacity: 0; transform: translateY(8px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
 .success { display: none; padding: var(--s-400); border-radius: 16px; background: var(--paper); color: var(--ink); }
-.success.show { display: block; }
+.success.show { display: block; animation: success-in .5s var(--ease) both; }
+@keyframes success-in { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .success.show { animation: none; } .form.leaving { transition: none; } }
+.success:focus { outline: none; }
 .success .icon { color: var(--gold); width: 32px; height: 32px; }
-.success h3 { margin-top: var(--s-200); }
+.success h3 { margin-top: var(--s-200); color: var(--navy); }
 .success p { margin-top: var(--s-75); color: var(--mut); }
 
 /* Footer */
