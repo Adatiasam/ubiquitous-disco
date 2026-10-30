@@ -13,7 +13,7 @@ Static site, no build step. Deploys as is on GitHub Pages (or any static host). 
 
 ## Contact form
 
-The form posts to [FormSubmit](https://formsubmit.co), which forwards each brief by email. The endpoint is the `data-endpoint` attribute on `<form id="brief">` in `index.html`. After activating FormSubmit, replace the email address there with the random alias FormSubmit provides so the address is not visible in the page source.
+The form posts to [FormSubmit](https://formsubmit.co), which forwards each brief by email. The endpoint is the `data-endpoint` attribute on `<form id="brief">` in `index.html`. It uses the FormSubmit alias (not the raw email address). FormSubmit only accepts submissions from domains it has activated; if the site moves to a new domain, submit the form once and click the activation link FormSubmit emails. Failed submissions log the reason to the browser console.
 
 ## Credits
 

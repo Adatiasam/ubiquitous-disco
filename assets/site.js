@@ -134,11 +134,12 @@
           standards: f.standard.value, brief: f.brief.value
         })
       }).then(function (r) { return r.json(); }).then(function (d) {
-        if (String(d.success) !== 'true') throw new Error('rejected');
+        if (String(d.success) !== 'true') throw new Error(d.message || 'rejected');
         form.hidden = true; success.classList.add('show'); success.focus();
-      }).catch(function () {
+      }).catch(function (err) {
+        if (window.console) console.error('Form submit failed:', err);
         status.className = 'form-status error';
-        status.textContent = 'We could not send your brief. Check your connection and try again.';
+        status.textContent = 'We could not send your brief. Please try again, or email us directly.';
       }).finally(function () { btn.disabled = false; btnLabel.textContent = 'Request a feasibility review'; });
     });
   }
