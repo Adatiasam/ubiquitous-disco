@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=202610301240">
+<link rel="stylesheet" href="assets/site.css?v=202610301316">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Physeia Data Labs","description":"Licensed, custom collected and specialist annotated clinical data from 80+ partner hospitals and 1,500+ doctors across India.","url":"https://physeiadatalab.com/","email":"hello@physeiadatalab.com"}
 </script>
@@ -331,7 +331,11 @@
         <p class="contact-alt">Prefer email? Write to <a href="mailto:hello@physeiadatalab.com">hello@physeiadatalab.com</a></p>
       </div>
       <div data-reveal data-delay=".1">
-        <form class="form" id="brief" novalidate data-endpoint="https://formsubmit.co/ajax/contact@physeiadatalab.com">
+        <form class="form" id="brief" novalidate method="POST" action="https://formsubmit.co/contact@physeiadatalab.com" data-endpoint="https://formsubmit.co/ajax/contact@physeiadatalab.com">
+          <input type="hidden" name="_subject" value="Physeia Data Labs feasibility request">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://physeiadatalab.com/?sent=1#contact">
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">
           <div class="row">
             <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" required autocomplete="name" aria-describedby="name-err"><span class="err" id="name-err" role="alert"></span></div>
@@ -397,6 +401,6 @@
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/vendor/CustomEase.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
-<script src="assets/site.js?v=202610301240" defer></script>
+<script src="assets/site.js?v=202610301316" defer></script>
 </body>
 </html>

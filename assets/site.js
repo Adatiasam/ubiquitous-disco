@@ -96,6 +96,10 @@
     var btn = form.querySelector('button[type="submit"]');
     var btnLabel = btn.querySelector('.label');
     var success = document.getElementById('brief-success');
+    if (/[?&]sent=1/.test(location.search)) {
+      form.hidden = true; success.classList.add('show');
+      if (history.replaceState) history.replaceState(null, '', location.pathname + '#contact');
+    }
     var rules = {
       name: function (v) { return v.trim() ? '' : 'Please add your name.'; },
       email: function (v) {
@@ -137,10 +141,11 @@
         if (String(d.success) !== 'true') throw new Error(d.message || 'rejected');
         form.hidden = true; success.classList.add('show'); success.focus();
       }).catch(function (err) {
-        if (window.console) console.error('Form submit failed:', err);
-        status.className = 'form-status error';
-        var why = err && err.message && err.message !== 'rejected' && !/fetch|network/i.test(err.message) ? ' (' + err.message + ')' : '';
-        status.textContent = 'We could not send your brief. Please try again, or email hello@physeiadatalab.com.' + why;
+        // Background send failed: fall back to a normal form post. FormSubmit then
+        // shows its own page (activation, spam check or error) and redirects back.
+        if (window.console) console.error('Form submit failed, falling back to page post:', err);
+        f._subject.value = 'Physeia Data Labs feasibility request: ' + (f.company.value || f.name.value);
+        HTMLFormElement.prototype.submit.call(form);
       }).finally(function () { btn.disabled = false; btnLabel.textContent = 'Request a feasibility review'; });
     });
   }
