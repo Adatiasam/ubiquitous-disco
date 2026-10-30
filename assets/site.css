@@ -426,3 +426,9 @@ ul.proof li { margin: 0; }
 .person h3 { font-size: 1.875rem; line-height: 2.25rem; }
 .person .role { margin-top: var(--s-75); font-size: .875rem; line-height: 1.25rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--gold-text); }
 .person p:not(.role) { margin-top: var(--s-100); color: var(--mut); }
+
+/* Network: four stats */
+#network .stats { grid-template-columns: repeat(2, 1fr); }
+#network .stat:nth-child(2) { border-right: 0; }
+#network .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line-dark); }
+@media (min-width: 900px) { #network .stats { grid-template-columns: repeat(4, 1fr); } #network .stat:nth-child(2) { border-right: 1px solid var(--line-dark); } #network .stat:nth-child(-n+2) { border-bottom: 0; } #network .stat .n { font-size: 3.75rem; } }
