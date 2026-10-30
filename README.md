@@ -1,12 +1,12 @@
 # Physeia Data Labs website
 
-Static site, no build step. Deploys as is on GitHub Pages (or any static host).
+Static site, no build step. Deploys as is on GitHub Pages (or any static host). Live at https://physeiadatalab.com (set by the `CNAME` file).
 
 | File | Purpose |
 |---|---|
 | `index.html` | Landing page |
 | `privacy.html`, `terms.html` | Legal pages (have these reviewed before relying on them) |
-| `404.html` | Branded not found page. Its links use the `/ubiquitous-disco/` prefix; change that if the site moves to a custom domain |
+| `404.html` | Branded not found page. Uses root relative links (`/`), so it works from any path on the domain |
 | `assets/site.css`, `assets/site.js` | Styles and behaviour |
 | `assets/vendor/` | GSAP 3.12.5 (standard no charge license) and Lenis 1.1.13 (MIT), self hosted |
 | `favicon.svg`, `og.png` | Browser icon and social sharing image |
