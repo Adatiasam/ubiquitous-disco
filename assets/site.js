@@ -96,6 +96,23 @@
     var btn = form.querySelector('button[type="submit"]');
     var btnLabel = btn.querySelector('.label');
     var success = document.getElementById('brief-success');
+    function showSuccess(animate) {
+      var reveal = function () {
+        form.hidden = true; form.classList.remove('leaving');
+        success.classList.add('show');
+        success.focus({ preventScroll: true });
+        // Keep the thank you card in view below the floating header
+        var top = success.getBoundingClientRect().top + window.pageYOffset - 120;
+        if (success.getBoundingClientRect().top < 100) {
+          if (lenis) lenis.scrollTo(top); else window.scrollTo({ top: top, behavior: motionOn ? 'smooth' : 'auto' });
+        }
+      };
+      if (animate && motionOn) { form.classList.add('leaving'); setTimeout(reveal, 300); } else reveal();
+    }
+    if (/[?&]sent=1/.test(location.search)) {
+      showSuccess(false);
+      if (history.replaceState) history.replaceState(null, '', location.pathname + '#contact');
+    }
     var rules = {
       name: function (v) { return v.trim() ? '' : 'Please add your name.'; },
       email: function (v) {
@@ -119,26 +136,29 @@
       e.preventDefault();
       var ok = Object.keys(rules).map(check).every(Boolean);
       if (!ok) { form.querySelector('[aria-invalid="true"]').focus(); return; }
-      if (form.elements._honey.value) return;
+      if (form.elements.botcheck.checked) return;
       btn.disabled = true; btnLabel.textContent = 'Sending your brief';
       status.className = 'form-status'; status.textContent = '';
       var f = form.elements;
-      fetch(ENDPOINT, {
+      fetch(form.action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify({
-          _subject: 'Physeia Data Labs feasibility request: ' + (f.company.value || f.name.value),
-          _template: 'table', _captcha: 'false',
+          access_key: f.access_key.value,
+          subject: 'Physeia Data Labs feasibility request: ' + (f.company.value || f.name.value),
+          from_name: f.from_name.value, replyto: f.email.value,
           name: f.name.value, email: f.email.value, company: f.company.value, country: f.country.value,
           data_type: f.modality.value, intended_use: f.use.value, engagement: f.engagement.value,
           standards: f.standard.value, brief: f.brief.value
         })
       }).then(function (r) { return r.json(); }).then(function (d) {
-        if (String(d.success) !== 'true') throw new Error('rejected');
-        form.hidden = true; success.classList.add('show'); success.focus();
-      }).catch(function () {
+        if (!d.success) throw new Error(d.message || 'rejected');
+        showSuccess(true);
+      }).catch(function (err) {
+        if (window.console) console.error('Form submit failed:', err);
+        var why = err && err.message && err.message !== 'rejected' && !/fetch|network|json/i.test(err.message) ? ' (' + err.message + ')' : '';
         status.className = 'form-status error';
-        status.textContent = 'We could not send your brief. Check your connection and try again.';
+        status.textContent = 'We could not send your brief. Please try again, or email hello@physeiadatalab.com.' + why;
       }).finally(function () { btn.disabled = false; btnLabel.textContent = 'Request a feasibility review'; });
     });
   }
