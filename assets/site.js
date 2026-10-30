@@ -139,7 +139,8 @@
       }).catch(function (err) {
         if (window.console) console.error('Form submit failed:', err);
         status.className = 'form-status error';
-        status.textContent = 'We could not send your brief. Please try again, or email hello@physeiadatalab.com.';
+        var why = err && err.message && err.message !== 'rejected' && !/fetch|network/i.test(err.message) ? ' (' + err.message + ')' : '';
+        status.textContent = 'We could not send your brief. Please try again, or email hello@physeiadatalab.com.' + why;
       }).finally(function () { btn.disabled = false; btnLabel.textContent = 'Request a feasibility review'; });
     });
   }
