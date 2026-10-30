@@ -305,6 +305,9 @@ h3 { font-size: 1.5rem; line-height: 2rem; letter-spacing: -0.01em; }
 .assure { list-style: none; padding: 0; margin: var(--s-500) 0 0; display: grid; gap: var(--s-200); }
 .assure li { display: flex; gap: var(--s-100); color: var(--white); }
 .assure .icon { color: var(--gold-light); }
+.contact-alt { margin-top: var(--s-400); color: var(--mut-dark); font-size: 1rem; line-height: 1.5rem; }
+.contact-alt a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.contact-alt a:hover { color: var(--gold-light); }
 .form { display: grid; gap: var(--s-200); padding: var(--s-400); border-radius: 16px; background: var(--paper); color: var(--ink); }
 @media (max-width: 639px) { .form { padding: var(--s-300); } }
 .row { display: grid; gap: var(--s-200); }
